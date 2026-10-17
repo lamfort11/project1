@@ -59,7 +59,7 @@ class SearchProblem:
         This method returns the total cost of a particular sequence of actions.
         The sequence must be composed of legal moves.
         """
-        util.raiseNotDefined()
+        util.raiseNotDefined()   
 
 
 def tinyMazeSearch(problem):
@@ -104,6 +104,7 @@ def depthFirstSearch(problem: SearchProblem):
                     ngan_xep.push((successor, chuoi_hanh_dong_moi))
 
     return[]
+    util.raiseNotDefined()
 
 def breadthFirstSearch(problem: SearchProblem):
     """Search the shallowest nodes in the search tree first."""
@@ -123,7 +124,8 @@ def breadthFirstSearch(problem: SearchProblem):
                 if successor not in da_duyet:
                     chuoi_hanh_dong_moi = actions + [action]
                     hang_doi.push((successor, chuoi_hanh_dong_moi))
-    return []        
+    return []  
+   
 
 def uniformCostSearch(problem: SearchProblem):
     """Search the node of least total cost first."""
@@ -144,7 +146,8 @@ def uniformCostSearch(problem: SearchProblem):
                     chuoi_hanh_dong_moi = actions + [action]
                     tong_chi_phi_moi = chi_phi_hien_tai + stepCost
                     hang_doi_uu_tien.push((successor, chuoi_hanh_dong_moi, tong_chi_phi_moi), tong_chi_phi_moi)
-    return []              
+    return []  
+    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
     """
@@ -155,7 +158,7 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
+    "*** YOUR CODE HERE ***" 
     import util
     hang_doi_uu_tien = util.PriorityQueue()
     start_state = problem.getStartState()
